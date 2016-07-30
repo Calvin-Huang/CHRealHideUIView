@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,17 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-Ml-doy">
-                                <rect key="frame" x="20" y="40" width="335" height="128"/>
+                                <rect key="frame" x="10" y="30" width="355" height="128"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="XQU-2G-T3U"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmA-V3-VJQ">
-                                <rect key="frame" x="20" y="178" width="335" height="128"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="aLg-pJ-Aiy"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8Q-2f-F3v">
@@ -39,35 +31,88 @@
                                     <action selector="toggleHideAndShowButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ci-ra-CDk"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uO4-8X-Fup">
+                                <rect key="frame" x="10" y="398" width="355" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0go-nZ-GA6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-mf-UY4">
+                                <rect key="frame" x="10" y="298" width="215" height="90"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.61960784310000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="URf-tL-ncM"/>
+                                    <constraint firstAttribute="width" constant="215" id="m1d-ik-VYx"/>
+                                </constraints>
+                                <state key="normal" title="Button Example">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1404118346563" translatesAutoresizingMaskIntoConstraints="NO" id="i7i-u5-dbg">
+                                <rect key="frame" x="10" y="168" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="MvT-g1-Uo6"/>
+                                    <constraint firstAttribute="height" constant="120" id="mmS-ut-jAh"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvV-Zc-4Iv">
+                                <rect key="frame" x="140" y="168" width="225" height="120"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HWt-L4-Gkv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTe-jU-YVq">
+                                <rect key="frame" x="235" y="298" width="130" height="90"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.80000000000000004" blue="0.65490196079999996" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="63m-fb-oMU"/>
+                                    <constraint firstAttribute="height" constant="90" id="Lqp-eB-n4R"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="63m-fb-oMU"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h8Q-2f-F3v" secondAttribute="bottom" constant="20" id="3PZ-u2-yS6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bmA-V3-VJQ" secondAttribute="trailing" constant="20" id="4Kr-eZ-fiK"/>
-                            <constraint firstItem="wFb-Ml-doy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8Rn-Wh-jcd"/>
+                            <constraint firstItem="uO4-8X-Fup" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="5gc-C1-Ghq"/>
+                            <constraint firstItem="wFb-Ml-doy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="8Rn-Wh-jcd"/>
+                            <constraint firstAttribute="trailing" secondItem="uO4-8X-Fup" secondAttribute="trailing" constant="10" id="BdE-WG-3Vz"/>
                             <constraint firstAttribute="trailing" secondItem="h8Q-2f-F3v" secondAttribute="trailing" constant="20" id="DnB-hm-r8O"/>
-                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="top" secondItem="wFb-Ml-doy" secondAttribute="bottom" constant="10" id="Ga4-zh-hjM"/>
-                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LW6-mG-Mly"/>
-                            <constraint firstAttribute="trailing" secondItem="bmA-V3-VJQ" secondAttribute="trailing" constant="20" id="VGS-2G-Szx"/>
-                            <constraint firstItem="wFb-Ml-doy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="eJl-br-Gv4"/>
-                            <constraint firstAttribute="trailing" secondItem="wFb-Ml-doy" secondAttribute="trailing" constant="20" id="iCi-49-esw"/>
+                            <constraint firstItem="UvV-Zc-4Iv" firstAttribute="top" secondItem="wFb-Ml-doy" secondAttribute="bottom" constant="10" id="Fwy-4J-cIy"/>
+                            <constraint firstItem="UvV-Zc-4Iv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-150" id="QgS-kz-ugt"/>
+                            <constraint firstItem="uTe-jU-YVq" firstAttribute="top" secondItem="UvV-Zc-4Iv" secondAttribute="bottom" constant="10" id="YDz-mT-IM5"/>
+                            <constraint firstItem="btn-mf-UY4" firstAttribute="top" secondItem="UvV-Zc-4Iv" secondAttribute="bottom" constant="10" id="Zm2-nU-pro"/>
+                            <constraint firstItem="wFb-Ml-doy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="eJl-br-Gv4"/>
+                            <constraint firstAttribute="trailing" secondItem="wFb-Ml-doy" secondAttribute="trailing" constant="10" id="iCi-49-esw"/>
+                            <constraint firstItem="uTe-jU-YVq" firstAttribute="leading" secondItem="btn-mf-UY4" secondAttribute="trailing" constant="10" id="jnG-Lq-vcs"/>
+                            <constraint firstItem="i7i-u5-dbg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="kCh-um-OeW"/>
+                            <constraint firstItem="UvV-Zc-4Iv" firstAttribute="leading" secondItem="i7i-u5-dbg" secondAttribute="trailing" constant="10" id="lzg-v8-hQf"/>
+                            <constraint firstItem="btn-mf-UY4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="nuK-In-QJs"/>
+                            <constraint firstItem="i7i-u5-dbg" firstAttribute="top" secondItem="wFb-Ml-doy" secondAttribute="bottom" constant="10" id="pCK-aD-RHE"/>
+                            <constraint firstAttribute="trailing" secondItem="uTe-jU-YVq" secondAttribute="trailing" constant="10" id="qay-aQ-588"/>
                             <constraint firstItem="h8Q-2f-F3v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qoc-Rl-9gp"/>
-                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="tNj-Ki-udu"/>
+                            <constraint firstItem="uO4-8X-Fup" firstAttribute="top" secondItem="uTe-jU-YVq" secondAttribute="bottom" constant="10" id="s5w-Aj-wQs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4Kr-eZ-fiK"/>
-                                <exclude reference="tNj-Ki-udu"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="blueButton" destination="btn-mf-UY4" id="Ctd-CN-fQo"/>
+                        <outlet property="imageView" destination="i7i-u5-dbg" id="YC6-XY-hiW"/>
                         <outlet property="redView" destination="wFb-Ml-doy" id="PQa-tn-Uus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="230.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1404118346563" width="500" height="672"/>
+    </resources>
 </document>
