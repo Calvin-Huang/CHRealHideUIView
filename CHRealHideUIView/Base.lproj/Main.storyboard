@@ -1,22 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CHRealHideUIView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-Ml-doy">
+                                <rect key="frame" x="20" y="40" width="335" height="128"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="XQU-2G-T3U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmA-V3-VJQ">
+                                <rect key="frame" x="20" y="178" width="335" height="128"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="aLg-pJ-Aiy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8Q-2f-F3v">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <state key="normal" title="Toggle Hide And Show"/>
+                                <connections>
+                                    <action selector="toggleHideAndShowButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ci-ra-CDk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h8Q-2f-F3v" secondAttribute="bottom" constant="20" id="3PZ-u2-yS6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bmA-V3-VJQ" secondAttribute="trailing" constant="20" id="4Kr-eZ-fiK"/>
+                            <constraint firstItem="wFb-Ml-doy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8Rn-Wh-jcd"/>
+                            <constraint firstAttribute="trailing" secondItem="h8Q-2f-F3v" secondAttribute="trailing" constant="20" id="DnB-hm-r8O"/>
+                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="top" secondItem="wFb-Ml-doy" secondAttribute="bottom" constant="10" id="Ga4-zh-hjM"/>
+                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LW6-mG-Mly"/>
+                            <constraint firstAttribute="trailing" secondItem="bmA-V3-VJQ" secondAttribute="trailing" constant="20" id="VGS-2G-Szx"/>
+                            <constraint firstItem="wFb-Ml-doy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="eJl-br-Gv4"/>
+                            <constraint firstAttribute="trailing" secondItem="wFb-Ml-doy" secondAttribute="trailing" constant="20" id="iCi-49-esw"/>
+                            <constraint firstItem="h8Q-2f-F3v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qoc-Rl-9gp"/>
+                            <constraint firstItem="bmA-V3-VJQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="tNj-Ki-udu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Kr-eZ-fiK"/>
+                                <exclude reference="tNj-Ki-udu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="redView" destination="wFb-Ml-doy" id="PQa-tn-Uus"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
