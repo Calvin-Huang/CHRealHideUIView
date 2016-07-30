@@ -23,11 +23,11 @@ public extension UIViewController {
         
         view.superview?.constraints
             .filter{
-                guard let firstItem = $0.firstItem as? UIView, let secondItem = $0.secondItem as? UIView else {
+                guard let firstItem = $0.firstItem as? UIView else {
                     return false
                 }
                 
-                return firstItem == view || secondItem == view
+                return firstItem == view
             }
             .forEach {
                 constantValues[String(format: "%p", $0)] = $0.constant
@@ -57,11 +57,11 @@ public extension UIViewController {
         
         view.superview?.constraints
             .filter{
-                guard let firstItem = $0.firstItem as? UIView, let secondItem = $0.secondItem as? UIView else {
+                guard let firstItem = $0.firstItem as? UIView else {
                     return false
                 }
                 
-                return firstItem == view || secondItem == view
+                return firstItem == view
             }
             .forEach {
                 guard let constant = constantValues[String(format: "%p", $0)] else {
