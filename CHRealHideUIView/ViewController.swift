@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var blueButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func toggleHideAndShowButtonClicked(_: AnyObject) {
+        if (redView.hidden) {
+            show(redView)
+        } else {
+            hide(redView)
+        }
         
+        if (blueButton.hidden) {
+            show(blueButton)
+        } else {
+            hide(blueButton)
+        }
+        
+        if (imageView.hidden) {
+            show(imageView)
+        } else {
+            hide(imageView)
+        }
     }
 }
 
