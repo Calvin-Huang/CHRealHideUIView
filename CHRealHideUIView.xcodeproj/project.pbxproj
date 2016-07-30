@@ -14,6 +14,8 @@
 		181E53DE1D4CA81100ADD606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181E53DC1D4CA81100ADD606 /* LaunchScreen.storyboard */; };
 		181E53E91D4CA81100ADD606 /* CHRealHideUIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E53E81D4CA81100ADD606 /* CHRealHideUIViewTests.swift */; };
 		181E53F41D4CA81100ADD606 /* CHRealHideUIViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E53F31D4CA81100ADD606 /* CHRealHideUIViewUITests.swift */; };
+		181E54051D4CA9B800ADD606 /* UIView+AdditionDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E54041D4CA9B800ADD606 /* UIView+AdditionDataExtension.swift */; };
+		181E54071D4CB44000ADD606 /* UIViewController+RealHideViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E54061D4CB44000ADD606 /* UIViewController+RealHideViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		181E53EF1D4CA81100ADD606 /* CHRealHideUIViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHRealHideUIViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181E53F31D4CA81100ADD606 /* CHRealHideUIViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHRealHideUIViewUITests.swift; sourceTree = "<group>"; };
 		181E53F51D4CA81100ADD606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181E54041D4CA9B800ADD606 /* UIView+AdditionDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AdditionDataExtension.swift"; path = "Extensions/UIView+AdditionDataExtension.swift"; sourceTree = "<group>"; };
+		181E54061D4CB44000ADD606 /* UIViewController+RealHideViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RealHideViewExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		181E53D21D4CA81000ADD606 /* CHRealHideUIView */ = {
 			isa = PBXGroup;
 			children = (
+				181E54011D4CA91900ADD606 /* Extensions */,
 				181E53D31D4CA81000ADD606 /* AppDelegate.swift */,
 				181E53D51D4CA81100ADD606 /* ViewController.swift */,
 				181E53D71D4CA81100ADD606 /* Main.storyboard */,
@@ -123,6 +128,15 @@
 				181E53F51D4CA81100ADD606 /* Info.plist */,
 			);
 			path = CHRealHideUIViewUITests;
+			sourceTree = "<group>";
+		};
+		181E54011D4CA91900ADD606 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				181E54041D4CA9B800ADD606 /* UIView+AdditionDataExtension.swift */,
+				181E54061D4CB44000ADD606 /* UIViewController+RealHideViewExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181E54051D4CA9B800ADD606 /* UIView+AdditionDataExtension.swift in Sources */,
+				181E54071D4CB44000ADD606 /* UIViewController+RealHideViewExtension.swift in Sources */,
 				181E53D61D4CA81100ADD606 /* ViewController.swift in Sources */,
 				181E53D41D4CA81000ADD606 /* AppDelegate.swift in Sources */,
 			);
