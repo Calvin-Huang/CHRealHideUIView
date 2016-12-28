@@ -1,6 +1,6 @@
 CHRealHideUIView
 =====================================
-![](https://travis-ci.org/Calvin-Huang/CHRealHideUIView.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-2.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-1.0.0-blue.svg)
+![](https://travis-ci.org/Calvin-Huang/CHRealHideUIView.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-3.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-2.0.0-blue.svg)
 
 ## Snapshot
 <img src="https://raw.githubusercontent.com/Calvin-Huang/CHRealHideUIView/master/assets/CHRealHideUIView.gif" alt="snapshot" width="400">

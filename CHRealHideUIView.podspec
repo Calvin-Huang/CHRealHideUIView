@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "CHRealHideUIView"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "CHRealHideUIView hide view not only make view invisible but also eliminate hidden view's blank."
 
   s.description  = <<-DESC
