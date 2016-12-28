@@ -18,7 +18,7 @@ extension UIView {
         }
         
         get {
-            return objc_getAssociatedObject(self, &AssociatedObjectHandle)
+            return objc_getAssociatedObject(self, &AssociatedObjectHandle) as AnyObject?
         }
     }
 }
