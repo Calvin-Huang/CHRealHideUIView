@@ -9,12 +9,12 @@
 import UIKit
 
 public extension UIViewController {
-    public func hide(view: UIView) {
+    public func hide(_ view: UIView) {
         var constantValues: [String: CGFloat] = [:]
         
         view.constraints
             .filter {
-                return $0.firstAttribute == .Height || $0.firstAttribute == .Width
+                return $0.firstAttribute == .height || $0.firstAttribute == .width
             }
             .forEach {
                 constantValues[String(format: "%p", $0)] = $0.constant
@@ -34,18 +34,18 @@ public extension UIViewController {
                 $0.constant = 0
             }
         
-        view.data = constantValues
-        view.hidden = true
+        view.data = constantValues as AnyObject?
+        view.isHidden = true
     }
     
-    public func show(view: UIView) {
+    public func show(_ view: UIView) {
         guard let constantValues = view.data as? [String: CGFloat] else {
             return
         }
         
         view.constraints
             .filter {
-                return $0.firstAttribute == .Height || $0.firstAttribute == .Width
+                return $0.firstAttribute == .height || $0.firstAttribute == .width
             }
             .forEach {
                 guard let constant = constantValues[String(format: "%p", $0)] else {
@@ -71,6 +71,6 @@ public extension UIViewController {
                 $0.constant = constant
             }
         
-        view.hidden = false
+        view.isHidden = false
     }
 }

@@ -24,19 +24,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func toggleHideAndShowButtonClicked(_: AnyObject) {
-        if (redView.hidden) {
+        if (redView.isHidden) {
             show(redView)
         } else {
             hide(redView)
         }
         
-        if (blueButton.hidden) {
+        if (blueButton.isHidden) {
             show(blueButton)
         } else {
             hide(blueButton)
         }
         
-        if (imageView.hidden) {
+        if (imageView.isHidden) {
             show(imageView)
         } else {
             hide(imageView)
