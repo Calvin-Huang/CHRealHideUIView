@@ -9,16 +9,28 @@
 import UIKit
 
 // Declare a global var to produce a unique address as the assoc object handle
-var AssociatedObjectHandle: UInt8 = 0
+var dataKey: UnsafePointer<Any>?
 
 extension UIView {
     var data: AnyObject? {
         set {
-            objc_setAssociatedObject(self, &AssociatedObjectHandle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if dataKey == nil {
+                dataKey = UnsafePointer(bitPattern: String(format: "%p", self).hashValue)
+            }
+            
+            guard let dataKey = dataKey else {
+                return
+            }
+            
+            objc_setAssociatedObject(self, dataKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         
         get {
-            return objc_getAssociatedObject(self, &AssociatedObjectHandle) as AnyObject?
+            guard let dataKey = dataKey else {
+                return nil
+            }
+            
+            return objc_getAssociatedObject(self, dataKey) as AnyObject?
         }
     }
 }
